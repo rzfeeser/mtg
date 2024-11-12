@@ -1,0 +1,15 @@
+- name: demo using rzfeeser.mtg.mtg_card module
+  hosts: localhost
+  gather_facts: false
+  connection: ansible.builtin.local
+
+  tasks:
+
+  - name: populate the var results with json obtained by using the mtg_card module
+    rzfeeser.mtg.mtg_card:  
+      name: Archangel%20Avacyn
+    register: results
+
+  - name: display results
+    ansible.builtin.debug:
+      var: results.mtg_json.cards[0].cmc
