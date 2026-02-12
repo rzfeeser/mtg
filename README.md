@@ -46,10 +46,9 @@ Ansible is a framework that runs Python scripts primarily used for for automatin
 
 
 ### How to Use
+- The module `rzfeeser.mtg.mtg_card` may be used to make API requests to https://api.magicthegathering.io/<version>/<resource>. This module was written to simplify interaction with https://api.magicthegathering.io/<version>/<resource> API. See https://magicthegathering.io/ for documentation on using the API. 
+
 <!--
-- The module `rzfeeser.pokeapi.pokeapi_info` may be used to make API requests to pokeapi.co/api/v2/. This module was written to simplify interaction with pokeapi.co/v2 API. See pokeapi.co for documentation on using the v2 API. It has the following options:
-
-
 - `rzfeeser.pokeapi.pokeapi_info` has the following options:
   - **resource**:
       description: This is the resource to lookup. See pokeapi.co/docs/v2 for all possible values. Values include 'ability', 'berry', 'berry-firmness', 'berry-flavor', 'characteristic', 'contest-effect', 'contest-type', 'egg-group', 'encounter-condition', 'encounter-condition-value', 'encounter-method', 'evolution-chain', 'evolution-trigger', 'gender', 'generation', 'growth-rate', 'item', 'item-attribute', 'item-category', 'item-fling-effect', 'item-pocket', 'language', 'location', 'location-area', 'machine', 'move', 'move-ailment', 'move-battle-style', 'move-category', 'move-damage-class', 'move-learn-method', 'move-target', 'nature', 'pal-park-area', 'pokeathlon-stat', 'pokedex', 'pokemon', 'pokemon-color', 'pokemon-form', 'pokemon-habitat', 'pokemon-shape', 'pokemon-species', 'region', 'stat', 'super-contest-effect', 'type', 'version', 'version-group'
@@ -75,5 +74,5 @@ Visit [https://magicthegathering.io](https://magicthegathering.io) for more info
 ### About the Author
 Russell Zachary Feeser (@RZFeeser) is a consultant and technology trainer focusing on Ansible, Python, AWX/Tower/AAP, Terraform, Go, Azure, 5G and core telecom communications. If you're interested in discussing a consulting or training project, feel free to reach out.  
 
-[https://rzfeeser.com](https://rzfeeser.com)  
-[https://iris7.com](https://iris7.com)
+- [https://rzfeeser.com](https://rzfeeser.com)  
+- [https://iris7.com](https://iris7.com)
