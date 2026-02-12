@@ -72,7 +72,8 @@ Ansible is a framework that runs Python scripts primarily used for for automatin
 Visit [https://magicthegathering.io](https://magicthegathering.io) for more information about the project.
 
 ### About the Author
-Russell Zachary Feeser (@RZFeeser) is a consultant and technology trainer focusing on Ansible, Python, AWX/Tower/AAP, Terraform, Go, Azure, 5G and core telecom communications. If you're interested in discussing a consulting or training project, feel free to reach out.  
+Russell Zachary Feeser (@RZFeeser) is a consultant and technology trainer focusing on Ansible, Python, AWX/Tower/AAP, Terraform, Go, Databricks, Snowflake, Azure, 5G, SIP and core telecom communications. If you're interested in discussing a consulting or training project, feel free to reach out.  
 
+- [https://youtube.com/@codewithfeeser](https://youtube.com/@codewithfeeser)
 - [https://rzfeeser.com](https://rzfeeser.com)  
 - [https://iris7.com](https://iris7.com)
