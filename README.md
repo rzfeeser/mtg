@@ -75,5 +75,5 @@ Visit [https://magicthegathering.io](https://magicthegathering.io) for more info
 ### About the Author
 Russell Zachary Feeser (@RZFeeser) is a consultant and technology trainer focusing on Ansible, Python, AWX/Tower/AAP, Terraform, Go, Azure, 5G and core telecom communications. If you're interested in discussing a consulting or training project, feel free to reach out.  
 
-[https://rzfeeser.com](https://rzfeeser.com)
+[https://rzfeeser.com](https://rzfeeser.com)  
 [https://iris7.com](https://iris7.com)
