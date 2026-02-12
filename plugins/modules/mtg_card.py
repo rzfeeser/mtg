@@ -33,13 +33,13 @@ options:
 #     - my_namespace.my_collection.my_doc_fragment_name
 
 author:
-    - Your Name (@yourGitHubHandle)
+    - Russell Zachary Feeser (@RZFeeser)
 '''
 
 EXAMPLES = r'''
 # Pass in a message
 - name: Test with a message
-  my_namespace.my_collection.mtg_card:
+  rzfeeser.mtg.mtg_card:
     name: Archangel%20Avacyn                 # string input
 
 '''

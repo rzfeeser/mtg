@@ -1,0 +1,13 @@
+---
+# Alta3 Research
+# Author: RZFeeser
+# Demo using rzfeeser.mtg.mtg-head100 role to return 100 cards from api.magicthegathering.io
+- name: Access api.magicthegathering.io/v1/cards
+  hosts: localhost
+  gather_facts: no
+  connection: local
+ 
+  tasks:
+  - name: Another way to call the role mtg-head100   # providing metadata for our task
+    ansible.builtin.import_role:
+      name: rzfeeser.mtg.mtg_head100   # this is the name of the role to be imported

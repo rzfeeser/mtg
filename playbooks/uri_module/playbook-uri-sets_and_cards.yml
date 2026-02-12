@@ -1,0 +1,89 @@
+---
+# @RZFeeser
+# Demo using ansible.builtin.uri module to demo interaction with api.magicthegathering.io
+#   using only the Ansible standard library. Specifically, exploring the endpoints:
+#   - api.magicthegathering.io/v1/sets
+#   - api.magicthegathering.io/v1/cards
+
+- name: Playbook - Magic the Gathering
+  hosts: localhost
+  connection: local
+  gather_facts: No
+
+  tasks:
+
+  - name: GET set data from MTG API
+    uri:
+      method: GET # <--- this is optional? GET is default.
+      url: https://api.magicthegathering.io/v1/sets
+      status_code: 200
+      return_content: true
+    register: MTG_sets
+
+
+  - name: Display returned data from MTG API
+    debug:
+      var: MTG_sets.json.sets
+      #msg: "{{ MTG_sets.json.sets }}"
+
+
+  - name: Loop across all sets
+    debug:
+      var: item
+    loop: "{{ MTG_sets.json.sets }}"
+
+
+  - name: Loop across all sets and remove only the name and code
+    debug:
+      msg: "The set {{ item.name }} has the code {{ item.code }}"
+    loop: "{{ MTG_sets.json.sets }}"
+
+
+  - name: GET card data from MTG API
+    uri:
+      method: GET
+      url: https://api.magicthegathering.io/v1/cards
+      status_code: 200
+      return_content: true
+    register: MTG_cards
+      #    tags:
+      #      - wip
+      #      - robinhood
+      #
+
+  - name: Display data returned by card API contents
+    debug:
+          var: MTG_cards.json.cards
+            #    tags:
+            #      - wip
+            #
+  - name: Loop through the data returned by the card API
+    debug:
+      #var: item.name
+      msg: "The card {{ item.name }} was created by the artist {{ item.artist }}"
+    loop: "{{ MTG_cards.json.cards }}"
+    loop_control:
+      label: "{{ item.name }}"
+        #    tags:
+        #      - wip
+        #  
+  - name: GET data from first set of MTG API
+    uri:
+      method: GET
+      url: https://api.magicthegathering.io/v1/sets/ktk
+      status_code: 200
+      return_content: true
+    register: MTG_first_set
+    tags:
+      - wip
+
+  - name: Show boosters from set
+    debug:
+      var: item
+        # msg: "The name of this set is {{MTG_first_set.json.set.name}}"
+    loop: "{{MTG_first_set.json.set.booster}}"
+    loop_control:
+      pause: 3
+    tags:
+      - wip
+    when: '"common" in item and "uncommon" not in item'

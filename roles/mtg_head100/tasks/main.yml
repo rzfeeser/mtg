@@ -1,0 +1,22 @@
+---
+# tasks file for mtg-head100
+# Make a request to api.magicthegathering.io/v1/cards
+- name: Send get request to mtg cards api
+  ansible.builtin.uri:
+    method: GET                # send this HTTP method
+    url: https://api.magicthegathering.io/v1/cards
+    status_code: 200           # OPTIONAL - we expect this response code back
+    return_content: true
+  register: mtg_cards          # create this variable
+
+- name: Show that the content was still retrieved
+  ansible.builtin.debug:
+    var: mtg_cards.json.cards  # display the variable we just created
+                               # specifically [json][cards]
+  
+- name: Loop through the data returned and display only the keys available
+  ansible.builtin.debug:
+    msg: "{{ item.keys() }}"
+  loop: "{{ mtg_cards.json.cards }}"
+  loop_control:
+    label: "{{ item.keys() }}"
