@@ -6,7 +6,7 @@ Galaxy: https://galaxy.ansible.com/rzfeeser/mtg
 
 ![rzfeeser.mtg Magic The Gathering Banner](https://github.com/rzfeeser/mtg/blob/main/docs/images/rzfeeser_ansible_mtg_collection.png?raw=true)
 
-This repository is an ansible collection, `rzfeeser.mtg`, written by @RZFeeser for the purposes of an Ansible collection containing plugins and playbooks that abstract interaction with Magic the Gather API service @ [MTG API](https://docs.magicthegathering.io/)
+This repository is an Ansible collection, `rzfeeser.mtg`, written by @RZFeeser for the purposes of an Ansible collection containing plugins and playbooks that abstract interaction with Magic the Gather API service @ [MTG API](https://docs.magicthegathering.io/)
 
 ### Overview
 
