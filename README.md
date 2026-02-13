@@ -42,7 +42,7 @@ Ansible is a framework that runs Python scripts primarily used for for automatin
 - `ansible-runner` needs to be installed, and Docker needs to exist
   - It should be mentioned that `ansible-runner` requires a special project directory layout before executing. See the [ansible-runner Project Homepage](https://ansible.readthedocs.io/projects/runner/en/stable/index.html) for more information
 - An Ansible Execution Environment container is maintained by this author, [@GitHub - mtg Ansible Execution Environment](https://github.com/rzfeeser/mtg/pkgs/container/mtg_ee). This solution includes Ansible, Python, Ansible-Runner, and the most recent `rzfeeser.mtg` collection
-- Use `ansible-runner` to run a playbook containing references to the `rzfeeser.pokeapi` collection - `ansible-runner run --process-isolation --process-isolation-executable docker --container-image docker pull ghcr.io/rzfeeser/mtg_ee:1.3.3 -p playbook_to_run.yml .`
+- Use `ansible-runner` to run a playbook containing references to the `rzfeeser.mtg` collection - `ansible-runner run --process-isolation --process-isolation-executable docker --container-image docker pull ghcr.io/rzfeeser/mtg_ee:1.3.3 -p playbook_to_run.yml .`
 
 
 ### How to Use
