@@ -1,3 +1,5 @@
+# NOTICE - magicthegather.io was SOLD. The API is no longer functional :(
+
 # rzfeeser.mtg - Magic The Gathering - Ansible Collection
 Author: Russell Zachary Feeser  
 GitHub: @RZFeeser  
